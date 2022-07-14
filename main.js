@@ -16,8 +16,8 @@ todoForm.addEventListener('submit', function (event) {
         let editButton = document.createElement('button');
         // let newDiv = document.createElement('div');
         // newDiv.setAttribute('clickableDiv');
-        // let deleteButton = document.createElement('button');
-        // deleteButton.innerText = "DELETE"
+        let deleteButton = document.createElement('button');
+        deleteButton.innerText = "DELETE"
         editButton.innerText = "Edit"
         newLi.addEventListener('click', function () {
             if (editOn.checked === false) {
@@ -41,31 +41,15 @@ todoForm.addEventListener('submit', function (event) {
 
         })
         ul.appendChild(newLi);
-        // newLi.appendChild(newDiv);
+        newLi.appendChild(deleteButton);
         // newDiv.appendChild(deleteButton);
         userInput.value = ''
-
-
+        
+        deleteButton.addEventListener('click', function (){
+            newLi.remove()
+        })
     }
-    // for (let i = 0; i < liLineThrough.length; i++) {
-    //     // console.log(liLineThrough);
-    //     liLineThrough[i].addEventListener('click', function () {
-    //         console.log(liLineThrough[i].style.textDecoration)
-    //         // liLineThrough[i].style.textDecoration = "line-through"
-    //         if (liLineThrough[i].style.textDecoration !== "line-through") {
-    //             liLineThrough[i].style.textDecoration = "line-through"
-    //         } else {
-    //             liLineThrough[i].style.textDecoration = ""
-    //         }
-    //     })
-
-    // }
 });
-// for (let i = 0; i < ulLI.length; i++) {
-//     ulLI.addEventListener('dblclick', function () {
-//         ulLI.innerText = userInput.value;
-//     })
-// }
 
 removeAll.addEventListener('click', function () {
     ul.innerHTML = "";
@@ -80,12 +64,3 @@ removeCompleted.addEventListener('click', function (event) {
         }
     }
 })
-
-// if (editOn.checked === true) {
-//     ul.addEventListener('click', function (event) {
-//         let button = event.target;
-//         if (userInput !== '') {
-//             button.innerText = userInput.value;
-//         }
-//     })
-// }
