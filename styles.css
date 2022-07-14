@@ -1,0 +1,15 @@
+#body {
+    background-image: url(./notePad.png);
+    background-size:cover
+    /* height: 190; */
+    /* width: 330; */
+}
+
+#todoForm {
+    text-align: center;
+
+}
+
+.ulList {
+    
+}
