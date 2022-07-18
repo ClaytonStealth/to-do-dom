@@ -1,20 +1,39 @@
 #body {
     background-image: url(./notePad.png);
-    background-size:cover
-    /* height: 190; */
-    /* width: 330; */
+    background-size: cover
+        /* height: 190; */
+        /* width: 330; */
 }
 
 #todoForm {
     text-align: center;
 
+
 }
 
-.ulList {
-
+#editMode {
+    size: 50px;
+    /* margin: 10px; */
+    /* padding: 20px; */
 }
 
 #userInput {
     background-color: darkgray;
-    color:rgb(117, 0, 128)
+    color: rgb(117, 0, 128);
+    font-family: sans-serif;
+}
+
+#addButton {
+    background-color: green;
+    border-radius: 10px;
+}
+
+#resetButton {
+    background-color: red;
+    border-radius: 10px;
+}
+
+#removeCompleted {
+    background-color: gold;
+    border-radius: 10px;
 }
